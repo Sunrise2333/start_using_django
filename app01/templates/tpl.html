@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模版语法</title>
+</head>
+<body>
+<h1>在此页面展示模版语法的使用</h1>
+    <div>{{ string }}</div>
+
+ <!--展示一个列表,或展示列表中的某个元素-->
+    <div>{{ list }}</div>
+    <div>{{ list.2 }}</div>
+
+<!--使用循环展示一个列表中的变量-->
+    <div>
+        {% for item in list %}
+            <span>{{ item }}</span>
+        {% endfor %}
+    </div>
+<hr/>
+
+<!--展示字典-->
+<div>{{ dictionary }}</div>
+<div>{{ dictionary.salary }}</div>
+<ul>
+    <!--item可替换为key/value,用以展示字典的键或值-->
+    {% for k,v in dictionary.items %}
+    <li>{{k}} = {{v}}</li>
+    {% endfor %}
+</ul>
+<hr/>
+
+<!--展示元素为字典的列表-->
+<div>{{ dic_list.2.salary }}</div>
+
+<div>
+    {% for item in dic_list %}
+    <div>
+        {{item.name}} {{item.role}}
+    </div>
+    {% endfor %}
+</div>
+<hr/>
+
+<!--条件语句的使用-->
+<div>
+    {% if dictionary.salary > 15000 %}
+        <h1> offer成真，心愿达成 </h1>
+    {% else %}
+        <h1> 继续努力，下一个更好 </h1>
+    {% endif %}
+</div>
+
+
+</body>
+</html>
