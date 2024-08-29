@@ -1,0 +1,5 @@
+DB_NAME=startusingdjango
+DB_USER=root
+DB_PASSWORD=chenxi2233
+DB_HOST=localhost
+DB_PORT=3306

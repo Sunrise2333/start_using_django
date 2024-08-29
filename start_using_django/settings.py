@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+from distutils.command.config import config
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'start_using_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'startusingdjango',
+        'USER': 'root',
+        'PASSWORD': 'chenxi2233',
+        'HOST': 'localhost',    #  127.0.0.1
+        'PORT': '3306',
     }
 }
 

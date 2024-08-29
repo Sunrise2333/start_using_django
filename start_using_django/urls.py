@@ -23,7 +23,14 @@ urlpatterns = [
     #   www.xxx.com/index/ -> 函数
     path('index/', views.index),
     path('users/user_list', views.user_list),
-    path('user/user_add', views.user_add),
     path('users/user_del',views.user_del),
     path('tpl/',views.tpl),
+    path('something/', views.something),
+    path('login/',views.login),
+    path('orm/test/',views.orm_test),
+
+    #用户管理案例
+    path('person/management/',views.person_management),
+    path('person/add/', views.person_add),
+    path('person/delete/', views.person_delete),
 ]
